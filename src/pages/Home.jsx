@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react'
-import CountriesData from '../assets/data.json'
 import Search from './components/sections/Search'
 import Filters from './components/sections/FiltersRegion'
 
@@ -8,8 +7,9 @@ export default function Home() {
     const [filteredCountries, setFilteredCountries] = useState([]);
 
     useEffect(() => {
-        setCountries(CountriesData);
-        setFilteredCountries(CountriesData);
+        fetch("https://restcountries.com/v2/all")
+        .then(response => response.json())
+        .then(data => {setCountries(data); setFilteredCountries(data)})
     }, []);
     const handleSearch = (searchValue) => {
         const filteredData = countries.filter((item) =>

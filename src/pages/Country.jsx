@@ -1,4 +1,3 @@
-import CountriesData from '../assets/data.json'
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom'
 
@@ -7,7 +6,9 @@ export default function Country() {
     const { CountryName } = useParams()
 
     useEffect(() => {
-        setCountries(CountriesData);
+        fetch("https://restcountries.com/v2/all")
+        .then(response => response.json())
+        .then(data => setCountries(data))
     }, []);
     const countryFind = countries.find((e) => CountryName === e.name)
 

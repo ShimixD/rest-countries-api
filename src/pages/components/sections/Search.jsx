@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 export default function Search({ handleChanges }) {
   const handleChange = (event) => {
     const searchValue = event.target.value;
