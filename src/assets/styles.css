@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --DarkBlueDarkModeElements: hsl(209, 23%, 22%);
+    --VeryDarkBlueDarkModeBackground: hsl(207, 26%, 17%);
+    --VeryDarkBlueLightModeText: hsl(200, 15%, 8%);
+    --DarkGrayLightModeInput: hsl(0, 0%, 52%);
+    --VeryLightGrayLightModeBackground: hsl(0, 0%, 98%);
+    --WhiteDarkModeTextLightModeElements: hsl(0, 0%, 100%);
+}
+body {
+    font-family: 'Nunito Sans', sans-serif;
+    background-color: var(--VeryLightGrayLightModeBackground);
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 70px 25px 70px;
+    background-color: var(--WhiteDarkModeTextLightModeElements);
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.toggle {
+    cursor: pointer;
+    font-weight: 600;
+}
+.toggle-mode {
+    display: flex;
+    align-items: center;
+}
+.toggle-mode svg {
+    margin-right: 10px;
+}
+.search-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 40px 70px 0 70px;
+}
+.input-container {
+    width: 480px;
+}
+.input-container input {
+    padding: 20px 20px 20px 80px;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 14px;
+    border: none;
+    border-radius: 7px;
+    font-weight: 600;
+    width: 100%;
+}
+.input-container svg {
+    position: absolute;
+    font-size: 18px;
+    margin: 20px 35px 20px 35px;
+}
+.filter-container {
+    width: 200px;
+    cursor: pointer;
+    border-radius: 8px;
+    background-color: white;
+}
+.filter-container summary {
+    padding: 19px;
+    border-radius: 8px;
+}
+.filter-container summary::after {
+    position: relative;
+    border-bottom: 1px solid;
+    border-bottom-left-radius: 2px;
+    border-left: 1px solid;
+    content: "";
+    display: inline-block;
+    height: .4rem;
+    width: .4rem;
+    transform: rotate(45deg) translate(50%);
+    left: 35px;
+    bottom: 3px;
+}
+.filter-active.filter-container summary:after {
+    transform: rotate(-45deg) translate(50%);
+}
+.region-list {
+    list-style: none;
+    padding: 12px;
+    position: absolute;
+    width: 200px;
+    border-radius: 8px;
+    margin-top: 10px;
+    display: grid;
+    background-color: white;
+}
+.region-list li {
+    font-size: 15px;
+    padding: 5px;
+}
+.region-list li:hover {
+    text-decoration: underline;
+}
+.main-container {
+    display: flex;
+    flex-direction: column;
+}
+.cards-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.card {
+    background-color: var(--WhiteDarkModeTextLightModeElements);
+    width: 265px;
+    height: 340px;
+    border-radius: 5px;
+    margin: 40px;
+}
+.card-image {
+    background-size: cover;
+    background-position: center;
+    width: 265px;
+    height: 160px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.card-text {
+    padding: 25px;
+}
+.card-text h1 {
+    font-size: 18px;
+    padding-bottom: 17px;
+}
+.card-text p {
+    font-weight: 600;
+    padding-bottom: 4px;
+    font-size: 15px;
+}
+.card-text p span {
+    font-weight: 300;
+}
+
+.dark-mode {
+    background-color: var(--VeryDarkBlueDarkModeBackground);
+    color: white;
+}
+.dark-mode nav {
+    background-color: var(--DarkBlueDarkModeElements);
+}
+.dark-mode a {
+    color: white;
+}
+.dark-mode .card {
+    background-color: var(--DarkBlueDarkModeElements);
+}
+.dark-mode .filter-container {
+    background-color: var(--DarkBlueDarkModeElements);
+}
+.dark-mode .region-list {
+    background-color: var(--DarkBlueDarkModeElements);
+}
+.dark-mode .input-container input {
+    background-color: var(--DarkBlueDarkModeElements);
+    color: white;
+}
+.dark-mode .border-countries a {
+    background-color: var(--DarkBlueDarkModeElements);
+    color: white;
+}
+.dark-mode .back-button {
+    background-color: var(--DarkBlueDarkModeElements);
+    color: white;
+}
+
+.main-country-container {
+    display: flex;
+}
+.country-image {
+    width: 565px;
+    height: 405px;
+}
+.country-container {
+    display: flex;
+    margin: 35px 55px 30px 85px;
+}
+.back-button {
+    width: 140px;
+    height: 45px;
+    padding: 13px;
+    text-align: center;
+    border-radius: 6px;
+    margin: 55px 55px 30px 85px;
+}
+.back-button svg {
+    padding-right: 10px;
+}
+.country-info {
+    margin: 40px 40px 40px 130px;
+}
+.country-info h1 {
+    font-size: 32px;
+    padding-bottom: 20px;
+}
+.country-info-block {
+    display: flex;
+    margin-bottom: 50px;
+}
+.info-block p, .border-countries p {
+    font-weight: 600;
+}
+.info-block p {
+    padding-bottom: 10px;
+}
+.info-block p span {
+    font-weight: 300;
+}
+.country-info1 {
+    margin-right: 140px;
+}
+.border-countries {
+    display: flex;
+    align-items: center;
+    width: 90%;
+    flex-wrap: wrap;
+}
+.border-countries p {
+    padding-right: 10px;
+}
+.border-countries a {
+    border-radius: 3px;
+    padding: 5px 15px 5px 15px;
+    font-size: 12px;
+    margin: 4px;
+    background-color: white;
+}
+.border-countries a:hover {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 1200px) {
+    .country-image {
+        width: 100%;
+        height: 100%;
+        max-width: 565px;
+        max-height: 405px;
+    }
+    .country-info {
+        margin: 40px;
+    }
+}
+@media screen and (max-width: 975px){
+    .country-container {
+        align-items: center;
+        flex-direction: column;
+        margin: 0;
+    }
+    .country-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .country-image {
+        padding: 20px;
+    }
+    .back-button {
+        margin: 20px;
+    }
+}
+@media screen and (max-width: 840px) {
+    nav {
+        padding: 25px 30px 25px 30px;
+    }
+    .search-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .input-container {
+        width: auto;
+        padding-bottom: 40px;
+    }
+}
