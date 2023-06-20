@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://shimixd.github.io/Frontend-Mentor-Challenges/rest-countries-api-with-color-theme-switcher-master",
+  "homepage": "https://rest-countries-api-gules.vercel.app/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
