@@ -31,13 +31,17 @@ export default function Filters({ country, setCountry }) {
 
   return (
     <section className="filter-container">
-      <summary onClick={toggleRegionList}>Filter by Region</summary>
+      <summary onClick={toggleRegionList} className={regionListActive ? "summary-active" : "summary-false"}>Filter by Region</summary>
       {regionListActive && (
         <div className="region-list">
           {regionList.map((region) => (
             <li
               key={region.label}
-              onClick={() => handleRegionClick(region.name)}
+              onClick={() => {
+                handleRegionClick(region.name);
+                toggleRegionList()
+              }
+              }
               className={region.name === selectedRegion ? "active" : ""}
             >
               {region.label}

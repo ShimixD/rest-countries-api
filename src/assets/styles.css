@@ -82,11 +82,13 @@ a {
     display: inline-block;
     height: .4rem;
     width: .4rem;
-    transform: rotate(45deg) translate(50%);
     left: 35px;
     bottom: 3px;
 }
-.filter-active.filter-container summary:after {
+.summary-false:after {
+    transform: rotate(45deg) translate(50%);
+}
+.summary-active:after {
     transform: rotate(-45deg) translate(50%);
 }
 .region-list {
